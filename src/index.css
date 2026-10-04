@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Ocean Blue palette */
+  --color-ocean-50:  #f0f9ff;
+  --color-ocean-100: #e0f2fe;
+  --color-ocean-500: #0ea5e9;
+  --color-ocean-600: #0284c7;
+  --color-ocean-700: #0369a1;
+  --color-ocean-800: #075985;
+  --color-ocean-900: #0c4a6e;
+
+  /* Sunset Orange palette */
+  --color-sunset-50:  #fff7ed;
+  --color-sunset-100: #ffedd5;
+  --color-sunset-500: #f97316;
+  --color-sunset-600: #ea580c;
+  --color-sunset-900: #7c2d12;
+
+  /* Sand */
+  --color-sand:      #F5F5DC;
+  --color-sand-dark: #E6E6CC;
+
+  /* Fonts */
+  --font-poppins: 'Poppins', sans-serif;
+  --font-inter:   'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-inter);
+    color: #1f2937;
+    background-color: var(--color-sand);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins);
+  }
+}
+
+.glass-nav {
+  background-color: rgb(255 255 255 / 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgb(255 255 255 / 0.2);
+}
