@@ -17,6 +17,7 @@
 - 📍 **Lokasi & Google Maps Embed**: Petunjuk arah langsung, jam operasional, dan peta interaktif.
 - ⏰ **Peak Hours Tracker**: Informasi jam ramai dan waktu terbaik untuk berkunjung.
 - 📱 **Fully Responsive**: Desain optimal di semua perangkat (Desktop, Tablet, & Mobile) dengan animasi halus bertenaga **Framer Motion**.
+- 🤖 **Minin AI Barista** *(NEW)*: Chatbot bertenaga **GPT-OSS 120B via Groq API** yang merekomendasikan menu, menjawab pertanyaan seputar cafe, dan membantu pengunjung memilih hidangan sesuai mood & waktu kunjungan — respons instan secara real-time.
 
 ---
 
@@ -28,6 +29,7 @@
 - **Animation**: [Framer Motion](https://www.framer.com/motion/)
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **State Management**: React Context API (`CartContext`, `ThemeContext`)
+- **AI Integration**: [Groq Cloud](https://groq.com/) (`openai/gpt-oss-120b`) — AI Barista "Minin" untuk rekomendasi menu real-time ultra-fast
 
 ---
 
@@ -51,18 +53,29 @@ Pastikan Anda telah menginstal:
    npm install
    ```
 
-3. **Jalankan development server**:
+3. **Setup Gemini API Key** *(untuk fitur AI Barista Minin)*:
+   ```bash
+   cp .env.example .env
+   ```
+   Lalu edit file `.env`, isi dengan API key kamu:
+   ```env
+   VITE_GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+   > 🔑 Dapatkan API key **gratis** di [Google AI Studio](https://aistudio.google.com/app/apikey).  
+   > Tanpa API key, aplikasi tetap berjalan normal — hanya fitur AI Barista yang akan menampilkan pesan peringatan.
+
+4. **Jalankan development server**:
    ```bash
    npm run dev
    ```
    Buka browser dan akses `http://localhost:5173`.
 
-4. **Build untuk produksi**:
+5. **Build untuk produksi**:
    ```bash
    npm run build
    ```
 
-5. **Preview hasil build produksi**:
+6. **Preview hasil build produksi**:
    ```bash
    npm run preview
    ```

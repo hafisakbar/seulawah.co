@@ -12,6 +12,7 @@ import PeakHours from './components/PeakHours';
 import FinalCTA from './components/FinalCTA';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import CartDrawer from './components/CartDrawer';
+import AiBarista from './components/AiBarista';
 
 function AppInner() {
   const { isDark } = useTheme();
@@ -32,6 +33,7 @@ function AppInner() {
         </main>
         <FloatingWhatsApp />
         <CartDrawer />
+        <AiBarista />
       </div>
     </div>
   );
